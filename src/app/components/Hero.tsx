@@ -29,7 +29,7 @@ export default function Hero() {
                     </h1>
 
                     <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl">
-                        At Nexora, an AI-driven platform, we're revolutionizing the fight against misinformation by providing cutting facts to strengthen the integrity of information.
+                        At Nexora, an AI-driven platform, we&apos;re revolutionizing the fight against misinformation by providing cutting facts to strengthen the integrity of information.
                     </p>
 
                     <button className="px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-medium
