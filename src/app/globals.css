@@ -4,8 +4,25 @@ html {
   scroll-behavior: smooth;
 }
 
-
 body {
-  background: linear-gradient(to right bottom, #000000 10%, #000000 50%);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Deep black base with subtle gradient for depth */
+  background: linear-gradient(
+    to bottom right,
+    #0A0A0A 0%,
+    #0A0A0A 60%,
+    #1A0A1F 100%
+  );
+  
+  font-family: 'Roboto', 'Arial', Helvetica, sans-serif;
+  color: #FFFFFF; /* default text white */
+  overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+/* Optional: smooth violet glow for links or buttons by default */
+a, button {
+  transition: all 0.3s ease;
+}
+
+a:hover, button:hover {
+  text-shadow: 0 0 8px #7C71B2;
 }
