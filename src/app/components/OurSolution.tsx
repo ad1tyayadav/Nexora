@@ -1,4 +1,4 @@
-  "use client";
+"use client";
 
 import React from "react";
 import { Search, MapPin, RotateCcw } from "lucide-react";
@@ -22,14 +22,16 @@ export default function Solutions() {
 
   const item = {
     hidden: { opacity: 0, y: 30, scale: 0.95 },
-    show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6, ease: "easeOut" as const} },
+    show: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.6, ease: "easeOut" as const },
+    },
   };
 
   return (
-    <section
-      id="solutions"
-      className="relative px-6 py-20 md:px-12"
-    >
+    <section id="solutions" className="relative px-6 py-20 md:px-12">
       <div className="max-w-6xl mx-auto text-center">
         {/* Heading */}
         <motion.h2
@@ -50,7 +52,8 @@ export default function Solutions() {
           viewport={{ once: true }}
           className="text-[#B0B0B0] text-md md:text-xl mb-12 max-w-3xl mx-auto"
         >
-          Our suite of AI-powered tools is designed to detect, analyze, and combat misinformation across digital platforms.
+          Our suite of AI-powered tools is designed to detect, analyze, and combat
+          misinformation across digital platforms.
         </motion.p>
 
         {/* Cards */}
@@ -65,13 +68,16 @@ export default function Solutions() {
             <motion.div
               key={i}
               variants={item}
-              className="rounded-2xl p-4 sm:p-8 bg-black/10 backdrop-blur-lg border border-white/20 shadow-lg
-                         hover:shadow-violet-500/30 hover:border-[#7C71B2]/50
+              className="rounded-2xl p-6 sm:p-8
+                         backdrop-blur-sm border border-white/20 shadow-lg opacity-80
+                         hover:border-[#7C71B2]/50 hover:shadow-[0_0_20px_#7C71B2] 
                          transition-all duration-300 transform hover:scale-105"
             >
               <div
-                className="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6 border border-white/30 rounded-full flex items-center justify-center text-white
-                              hover:shadow-[0_0_15px_#7C71B2] transition-shadow duration-300"
+                className="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6 
+                           border border-white/30 rounded-full flex items-center justify-center 
+                           text-white bg-white/5 backdrop-blur-sm
+                           hover:shadow-[0_0_15px_#7C71B2] transition-shadow duration-300"
               >
                 {s.icon}
               </div>

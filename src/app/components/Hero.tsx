@@ -2,35 +2,9 @@
 
 import React, { useMemo } from "react";
 import { motion } from "framer-motion";
+import HeroText from "./HeroText";
 
 export default function Hero() {
-    // Memoize variants to prevent unnecessary re-renders
-    const backgroundTextVariants = useMemo(() => ({
-        hidden: {
-            opacity: 0,
-            y: 20
-        },
-        visible: {
-            opacity: 0.1,
-            y: 0,
-            transition: {
-                duration: 1.5,
-                ease: "easeOut" as const
-            }
-        }
-    }), []);
-
-    const floatingVariants = useMemo(() => ({
-        animate: {
-            y: [0, -15, 0],
-            transition: {
-                duration: 8,
-                repeat: Infinity,
-                ease: "easeInOut" as const
-            }
-        }
-    }), []);
-
     const containerVariants = useMemo(() => ({
         hidden: { opacity: 0 },
         visible: {
@@ -61,42 +35,7 @@ export default function Hero() {
     return (
         <div className="relative px-4 sm:px-6 py-20 md:px-12 min-h-screen flex items-center">
             {/* Giant Background Text with Animation - Reduced on mobile */}
-            <div className=" absolute inset-0 flex items-center justify-center overflow-hidden">
-                <motion.h1
-                    className="text-[7rem] sm:text-[5rem] md:text-[10rem] lg:text-[11rem] font-extrabold text-white select-none pointer-events-none"
-                    variants={isReducedMotion ? undefined : backgroundTextVariants}
-                    initial="hidden"
-                    animate="visible"
-                    style={{ willChange: 'transform, opacity' }} // Hint browser for optimization
-                >
-                    <motion.span
-                        className="block text-center"
-                        variants={isReducedMotion ? undefined : floatingVariants}
-                        animate={isReducedMotion ? undefined : "animate"}
-                        style={{ willChange: 'transform' }}
-                    >
-                        TRUTH
-                    </motion.span>
-                    <motion.span
-                        className="block text-center mt-4 md:mt-8 ml-12 "
-                        variants={isReducedMotion ? undefined : floatingVariants}
-                        animate={isReducedMotion ? undefined : "animate"}
-                        transition={{ delay: 0.5 }}
-                        style={{ willChange: 'transform' }}
-                    >
-                        IMMUNESYSTEM
-                    </motion.span>
-                    <motion.span
-                        className="block text-center mt-4 md:mt-8"
-                        variants={isReducedMotion ? undefined : floatingVariants}
-                        animate={isReducedMotion ? undefined : "animate"}
-                        transition={{ delay: 1 }}
-                        style={{ willChange: 'transform' }}
-                    >
-                        TRUTH
-                    </motion.span>
-                </motion.h1>
-            </div>
+           <HeroText />
 
             {/* Main Card Content */}
             <div className="relative z-10 max-w-4xl mx-auto w-full">

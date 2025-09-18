@@ -94,7 +94,7 @@ export default function Contact() {
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="rounded-3xl p-6 sm:p-8 md:p-12 bg-black/20 backdrop-blur-lg border border-white/20 shadow-lg hover:shadow-violet-500/30 transition-shadow duration-500"
+            className="rounded-3xl p-6 sm:p-8 md:p-12 backdrop-blur-sm border border-white/20 shadow-lg opacity-90 hover:shadow-violet-500/30 transition-shadow duration-500"
           >
             {formContent}
           </motion.div>
