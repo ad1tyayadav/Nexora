@@ -59,11 +59,11 @@ export default function Hero() {
         window.matchMedia('(prefers-reduced-motion: reduce)').matches : false;
 
     return (
-        <div className="relative px-4 sm:px-6 py-20 md:px-12 bg-[#0A0A0A] min-h-screen flex items-center">
+        <div className="relative px-4 sm:px-6 py-20 md:px-12 min-h-screen flex items-center">
             {/* Giant Background Text with Animation - Reduced on mobile */}
-            <div className="hidden sm:block absolute inset-0 flex items-center justify-center overflow-hidden">
+            <div className=" absolute inset-0 flex items-center justify-center overflow-hidden">
                 <motion.h1
-                    className="text-[3rem] sm:text-[5rem] md:text-[10rem] lg:text-[12rem] font-extrabold text-white select-none pointer-events-none"
+                    className="text-[7rem] sm:text-[5rem] md:text-[10rem] lg:text-[11rem] font-extrabold text-white select-none pointer-events-none"
                     variants={isReducedMotion ? undefined : backgroundTextVariants}
                     initial="hidden"
                     animate="visible"
@@ -78,7 +78,7 @@ export default function Hero() {
                         TRUTH
                     </motion.span>
                     <motion.span
-                        className="block text-center mt-4 md:mt-8"
+                        className="block text-center mt-4 md:mt-8 ml-12 "
                         variants={isReducedMotion ? undefined : floatingVariants}
                         animate={isReducedMotion ? undefined : "animate"}
                         transition={{ delay: 0.5 }}

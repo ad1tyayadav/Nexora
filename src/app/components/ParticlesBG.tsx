@@ -8,7 +8,7 @@ export const FloatingParticles = () => {
   const particleCount = 40; // fewer particles for performance
 
   useEffect(() => {
-    const handleResize = () => setIsDesktop(window.innerWidth >= 768);
+    const handleResize = () => setIsDesktop(window.innerWidth >= 1);
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);

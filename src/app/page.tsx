@@ -9,10 +9,10 @@ import { FloatingParticles } from './components/ParticlesBG';
 
 function Nexora() {
   return (
-    <div className="min-h-auto lg:m-20 text-white bg-[#0A0A0A]">
+    <div className="min-h-auto text-white">
       <FloatingParticles />
-      <div className="bg-black/10 backdrop-blur-lg border border-white/20 rounded-3xl p-8 md:p-12">
-        <Navbar />
+      <div className=" pt-8 ">
+        {/* <Navbar /> */}
 
         {/* Hero Section */}
         <Hero />

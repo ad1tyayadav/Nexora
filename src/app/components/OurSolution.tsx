@@ -28,7 +28,7 @@ export default function Solutions() {
   return (
     <section
       id="solutions"
-      className="relative px-6 py-20 md:px-12 bg-[#0A0A0A]"
+      className="relative px-6 py-20 md:px-12"
     >
       <div className="max-w-6xl mx-auto text-center">
         {/* Heading */}

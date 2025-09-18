@@ -10,7 +10,7 @@ function Navbar() {
 
   return (
     <nav className="sticky top-0 w-full flex items-center justify-between px-6 py-4 md:px-12 z-50
-                    bg-black/30 backdrop-blur-md border-b border-white/20 shadow-lg">
+                     backdrop-blur-md shadow-lg">
       {/* Logo */}
       <div className="text-2xl font-extrabold text-white">
         NEXORA

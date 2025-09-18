@@ -61,7 +61,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative px-4 sm:px-6 py-16 md:px-12 bg-[#0A0A0A]"
+      className="relative px-4 sm:px-6 py-16 md:px-12"
     >
       <div className="max-w-4xl mx-auto text-center">
         <motion.h2

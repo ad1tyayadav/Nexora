@@ -6,12 +6,7 @@ html {
 
 body {
   /* Deep black base with subtle gradient for depth */
-  background: linear-gradient(
-    to bottom right,
-    #0A0A0A 0%,
-    #0A0A0A 60%,
-    #1A0A1F 100%
-  );
+background-color: black;
   
   font-family: 'Roboto', 'Arial', Helvetica, sans-serif;
   color: #FFFFFF; /* default text white */

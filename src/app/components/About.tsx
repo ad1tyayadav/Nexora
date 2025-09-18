@@ -106,7 +106,7 @@ function AboutSection() {
   );
 
   return (
-    <section id="about" className="relative px-4 sm:px-6 py-16 md:px-12 bg-[#0A0A0A]">
+    <section id="about" className="relative px-4 sm:px-6 py-16 md:px-12">
       <div className="max-w-5xl mx-auto">
         {isDesktop ? (
           <div className="rounded-3xl p-6 sm:p-8 md:p-12 bg-black/10 backdrop-blur-lg border border-white/20 shadow-lg">
