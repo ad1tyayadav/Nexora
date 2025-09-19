@@ -33,7 +33,7 @@ export default function Hero() {
         window.matchMedia('(prefers-reduced-motion: reduce)').matches : false;
 
     return (
-        <div className="relative px-4 sm:px-6 py-20 md:px-12 min-h-screen flex items-center">
+        <div className="relative px-4 sm:px-6 py-20 md:px-12 min-h-screen flex top-18">
             {/* Giant Background Text with Animation - Reduced on mobile */}
            <HeroText />
 

@@ -33,7 +33,7 @@ function HeroText() {
         window.matchMedia('(prefers-reduced-motion: reduce)').matches : false;
 
     return (
-        <div className=" absolute inset-0 flex items-center justify-center overflow-hidden">
+        <div className=" fixed inset-0 flex items-center justify-center overflow-hidden">
             <motion.h1
                 className="text-[5rem] sm:text-[5rem] md:text-[10rem] lg:text-[11rem] font-extrabold text-white select-none pointer-events-none"
                 variants={isReducedMotion ? undefined : backgroundTextVariants}

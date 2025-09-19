@@ -41,7 +41,7 @@ export default function Solutions() {
   };
 
   return (
-    <section id="solutions" className="relative px-6 py-20 md:px-12">
+    <section id="solutions" className="relative -top-20 px-6 py-20 md:px-12">
       <div className="max-w-6xl mx-auto text-center">
         {/* Heading */}
         <motion.h2
