@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Search, MapPin, RotateCcw } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -19,9 +19,26 @@ export default function Solutions() {
     {
       icon: <RotateCcw size={28} />,
       title: "Chaos Mirror",
-      details: "Reveals the chaos a single lie can unleash — before it happens.",
+      details: "Reveals the chaos a single lie can unleash — before it happens.",
     },
   ];
+
+  const [isMobile, setIsMobile] = useState(false);
+  const [activeCard, setActiveCard] = useState<number | null>(null);
+
+  useEffect(() => {
+    // Detect screen size
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  const toggleCard = (index: number) => {
+    if (isMobile) {
+      setActiveCard(activeCard === index ? null : index);
+    }
+  };
 
   return (
     <section id="solutions" className="relative px-6 py-20 md:px-12">
@@ -55,13 +72,14 @@ export default function Solutions() {
               key={i}
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.3 }}
+              onClick={() => toggleCard(i)}
               className="relative group rounded-2xl p-6 sm:p-8 
                          backdrop-blur-md border border-white/20 shadow-lg
                          bg-gradient-to-br from-white/10 to-white/5
-                         overflow-hidden cursor-pointer"
+                         overflow-hidden cursor-pointer select-none"
             >
               {/* Default Content */}
-              <div className="relative z-10">
+              <div className="relative z-10 pointer-events-none">
                 <div
                   className="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6 
                              border border-white/30 rounded-full flex items-center justify-center 
@@ -75,15 +93,21 @@ export default function Solutions() {
                 </h3>
               </div>
 
-              {/* Hover Layer (Tailwind powered, slides up) */}
+              {/* Hover / Tap Layer */}
               <div
-                className="absolute inset-0 z-10 flex items-center justify-center
-             bg-gradient-to-br from-[#2e006d]/90 to-[#000000] 
-             text-white p-6 rounded-2xl transform translate-y-full 
-             group-hover:translate-y-0 transition-transform duration-500 ease-out
-             shadow-[0_0_25px_#7C71B2,0_0_50px_#4A00E0]"
+                className={`absolute inset-0 z-20 flex items-center justify-center
+                  bg-gradient-to-br from-[#2e006d]/90 to-[#000000] 
+                  text-white p-6 rounded-2xl transform transition-transform duration-500 ease-out
+                  shadow-[0_0_25px_#7C71B2,0_0_50px_#4A00E0]
+                  ${
+                    isMobile
+                      ? activeCard === i
+                        ? "translate-y-0"
+                        : "translate-y-full"
+                      : "translate-y-full group-hover:translate-y-0"
+                  }`}
               >
-                <p className="text-sm sm:text-base font-medium tracking-wide">
+                <p className="text-sm sm:text-base font-medium tracking-wide text-center">
                   {s.details}
                 </p>
               </div>
