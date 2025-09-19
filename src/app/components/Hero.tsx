@@ -38,7 +38,7 @@ export default function Hero() {
            <HeroText />
 
             {/* Main Card Content */}
-            <div className="relative z-10 max-w-4xl mx-auto w-full">
+            <div className="relative z-10 max-w-3xl mx-auto w-full">
                 <motion.div
                     className="w-full rounded-2xl p-6 md:p-12 bg-gradient-to-br from-black/40 to-black/20 backdrop-blur-lg border border-white/20 shadow-lg hover:shadow-violet-500/20 transition-all duration-500"
                     initial={isReducedMotion ? false : { opacity: 0, y: 30 }}
@@ -56,7 +56,7 @@ export default function Hero() {
                             variants={isReducedMotion ? undefined : itemVariants}
                             style={{ willChange: 'transform, opacity' }}
                         >
-                            Defending truth<br />in the digital age
+                            Reality. Defended.
                         </motion.h1>
 
                         <motion.p
@@ -64,7 +64,7 @@ export default function Hero() {
                             variants={isReducedMotion ? undefined : itemVariants}
                             style={{ willChange: 'transform, opacity' }}
                         >
-                            At Nexora, an AI-driven platform, we&apos;re revolutionizing the fight against misinformation by providing cutting facts to strengthen the integrity of information.
+                            Intercept. Verify. Immunize. The end of misinformation begins here.
                         </motion.p>
 
                         <motion.button
@@ -77,7 +77,7 @@ export default function Hero() {
                             whileTap={isReducedMotion ? undefined : { scale: 0.95 }}
                             style={{ willChange: 'transform' }}
                         >
-                            Get Started
+                            Activate Shield
                         </motion.button>
                     </motion.div>
                 </motion.div>

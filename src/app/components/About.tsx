@@ -27,9 +27,9 @@ function AboutSection() {
         whileInView="visible"
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-3xl md:text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#7C71B2] to-[#4A00E0]"
+        className="text-3xl text-center md:text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#7C71B2] to-[#4A00E0]"
       >
-        About NEXORA
+        Why NEXORA Exists
       </motion.h2>
 
       {/* Description */}
@@ -41,9 +41,7 @@ function AboutSection() {
         transition={{ duration: 0.7, delay: 0.2 }}
         className="text-[#B0B0B0] text-sm sm:text-base md:text-lg leading-relaxed mb-8"
       >
-        Nexora is an AI-powered platform built to protect truth in the digital age.
-        We focus on identifying misinformation, validating facts, and restoring trust
-        in online platforms through AI and human insight.
+        Nexora is not an app — it’s the immune system for truth. Built on AI and human insight, it intercepts lies, verifies reality, and restores trust across digital platforms. Our purpose is simple: defend civilization from the chaos of misinformation.
       </motion.p>
 
       {/* Mission & Vision */}
@@ -51,11 +49,11 @@ function AboutSection() {
         {[
           {
             title: "Our Mission",
-            desc: "To empower people with accurate, transparent, and reliable information.",
+            desc: "To shield every human with untouchable truth",
           },
           {
             title: "Our Vision",
-            desc: "A future where digital platforms serve as a space of truth and accountability.",
+            desc: "A world where misinformation dies before it spreads.",
           },
         ].map((item, i) => (
           <motion.div
@@ -88,9 +86,9 @@ function AboutSection() {
         </h3>
         <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {[
-            "Transparency in information",
-            "Responsibility towards society",
-            "Innovation with AI-powered solutions",
+            "Transparency as a weapon",
+            "Accountability over algorithms",
+            "AI built for defense, not deception",
           ].map((value, i) => (
             <motion.li
               key={i}

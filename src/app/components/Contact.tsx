@@ -49,11 +49,11 @@ export default function Contact() {
         whileHover={{ scale: 1.05, boxShadow: "0 0 20px #7C71B2" }}
         whileTap={{ scale: 0.95 }}
         type="submit"
-        className="px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-sm sm:text-base font-medium 
+        className="m-auto justify-center px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-sm sm:text-base font-medium 
                    bg-gradient-to-r from-[#7C71B2]/30 to-[#4A00E0]/30 border border-white/20 
                    hover:from-[#7C71B2]/60 hover:to-[#4A00E0]/60 transition-all"
       >
-        Send Message
+        Send Signal
       </motion.button>
     </motion.form>
   );
@@ -73,7 +73,7 @@ export default function Contact() {
           className="text-3xl sm:text-3xl md:text-5xl font-extrabold mb-6 
                      bg-clip-text text-transparent bg-gradient-to-r from-[#7C71B2] to-[#4A00E0]"
         >
-          Contact Us
+          Connect with NEXORA
         </motion.h2>
 
         <motion.p
@@ -84,7 +84,7 @@ export default function Contact() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="text-[#B0B0B0] text-sm sm:text-base md:text-lg mb-8"
         >
-          Have questions or want to collaborate? Reach out to our team!
+          Questions. Ideas. Collaborations. The channel is open.
         </motion.p>
 
         {isDesktop ? (
