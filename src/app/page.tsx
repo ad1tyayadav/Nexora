@@ -5,6 +5,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { FloatingParticles } from './components/ParticlesBG';
+import VideoSection from './components/VideoSection';
 
 function Nexora() {
   return (
@@ -18,6 +19,7 @@ function Nexora() {
 
         {/* Solutions Section */}
         <Solutions />
+        <VideoSection />
         <About />
         <Contact />
         <Footer />
