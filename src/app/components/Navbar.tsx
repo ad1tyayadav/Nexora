@@ -27,8 +27,13 @@ function Navbar() {
             {link}
           </a>
         ))}
-        <button className="px-6 py-2 rounded-lg font-semibold bg-gradient-to-r from-[#7C71B2]/20 to-[#4A00E0]/20 border border-white/20 hover:from-[#7C71B2]/50 hover:to-[#4A00E0]/50 hover:shadow-[0_0_10px_#7C71B2] transition-all transform hover:scale-105">
-          Get Started
+        <button
+          onClick={() => {
+            const section = document.getElementById("videos");
+            section?.scrollIntoView({ behavior: "smooth" })
+          }}
+          className="px-6 py-2 rounded-lg font-semibold bg-gradient-to-r from-[#7C71B2]/20 to-[#4A00E0]/20 border border-white/20 hover:from-[#7C71B2]/50 hover:to-[#4A00E0]/50 hover:shadow-[0_0_10px_#7C71B2] transition-all transform hover:scale-105">
+          Demo
         </button>
       </div>
 
